@@ -44,7 +44,7 @@ Two moves:
 Skills auto-load from the skills directory:
 
 ```bash
-git clone https://github.com/paperfoot/metatext ~/.claude/skills/metatext
+git clone https://github.com/paperfoot/metatext-skill ~/.claude/skills/metatext
 ```
 
 The agent loads it on demand when a task involves producing or auditing a deliverable, or on triggers like "check for metatext" or "make this a standalone document."
