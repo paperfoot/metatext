@@ -112,14 +112,13 @@ Rule: include a disclaimer only when a real such document, made by a real profes
 
 ## 8. LLM-default scaffolding and chrome
 
-Artifacts and ornaments that exist only because a model made the document.
+Artifacts and ornaments that exist only because a model made the document — structural chrome a real instance would not carry. (Pure word-choice, rhythm and punctuation tells — em-dashes, a ".." separator, "not just X, but Y" — are *style*, not metatext; they belong to humanise-text.)
 
 | Metatext | Fix |
 |---|---|
 | Reference codes like "CTR-2026-0001". | DELETE — real contracts don't self-number like this. |
 | "Effective..." / "Effective date" framing in a contract. | Use a normal date line as that document type actually does; cut the leakage. |
 | Eyebrow line above the title; date in the header. | No eyebrow; date in the bottom colophon. |
-| The ".." two-dot separator as a stylistic affectation in a formal report. | Clean punctuation: colon in titles, commas and full stops in prose. (".." is only for public/X voice, never reports.) |
 | READMEs and helper files that explain things only an LLM would narrate. | Omit unless a real handover needs them; make filenames and structure self-evident instead. |
 
 ---
