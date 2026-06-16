@@ -33,28 +33,25 @@ If no, something is leaking. Cut until yes.
 
 **Artifact-level** — the object is shaped like a chat reply, not a deliverable: option menus left in ("Version 1 / 2 / 3 — pick one"), the genre stamped on itself (a real contract's cover never says "Contract for the sale of X" as an eyebrow under its title; a real elevator pitch is not titled "Elevator Pitch"), addressing the requester instead of the audience, unrequested disclaimers, README / reference-code / "Effective date" boilerplate no real version carries, and content outside the true scope.
 
-The fully worked catalogue with real before/after fixes is in `reference/taxonomy.md`. It is an **audit checklist — read it before auditing, not while producing.** When producing, lead with the role frame and the shape of a clean exemplar; do not prime yourself with a long inventory of the phrasings to avoid. (Positive examples of the target voice steer current models better than a list of what not to write — a dense list of bad phrasings can itself pull them into the output.)
+The fully worked catalogue with real before/after fixes is in `reference/taxonomy.md` — an **audit checklist: read it before auditing, not while producing.** When producing, lead with a clean exemplar; priming yourself with the list of phrasings to avoid only pulls them into the output.
 
 ## Why it happens (so you can pre-empt it)
 
-The mechanisms below are documented; full citations in `reference/grounding.md`.
+Four trained-in pressures produce it; receipts in `reference/grounding.md`.
 
-- **Verbosity is reward-hacked in.** RLHF reward models carry a documented length bias — a length-only reward reproduces most RLHF gains (Singhal et al. 2023). In this artifact-shaped failure the residue is padding, signposting and restatement. More words feel safer to the model; they are not.
-- **Sycophancy is trained in.** Preference models reward agreeable, validating text — praise, warm-up flattery, self-justification (Sharma et al. 2023; it scales with RLHF, Perez et al. 2022).
-- **Over-caution adds the disclaimers.** Exaggerated-safety training makes models hedge and bolt on defensive disclaimers where a real instance carries none (XSTest, Röttger et al. 2023) — a separate cause from sycophancy, though the two look alike.
-- **Ambiguity is under-resolved.** Models recognise an underspecified ask *when prompted to check*, but in normal generation default to a best guess that silently bakes in assumptions (Su & Cardie 2026); unprompted recognition is itself unreliable (CLAMBER 2024). (The XY problem: the user names a solution X; the real goal sits behind it.)
-- **The artifact carries an LLM register.** Models over-produce structural scaffolding, transitions and engagement markers relative to human writing (Reinhart et al. 2024; Kobak et al. 2024), and markdown chrome leaks from training into prose (Freeburg 2026). A finished artifact for an expert reader carries far less of it.
-- **Format itself is reward-biased.** Reward models and judges prefer lists, bold, headers and section-scaffolding independent of content (Zhang et al. 2024) — the source of much artifact-level chrome: eyebrows, needless sections, option tables.
-- **The default assistant persona leaks.** Post-training installs a helpful-assistant persona whose register — "here's what I'll do", self-identification, the chat-reply shape — bleeds into the deliverable (the Assistant-Axis effect, 2026). This is the deepest cause of "reads like a model answering a brief": the failure is persona-leak, not merely verbosity. Inhabit the artifact's real author instead.
+- **Length and validation are reward-hacked in** — models pad, signpost, restate, flatter and over-validate because preference training rewards it.
+- **Over-caution bolts on disclaimers** a real instance would never carry.
+- **Ambiguity is under-resolved** — the model recognises an underspecified ask but emits a best guess that bakes in assumptions. (The XY problem: the user names a solution X; the real goal sits behind it.)
+- **The default assistant persona leaks** — its register ("here's what I'll do", self-identification, the chat-reply shape) bleeds into the deliverable. The deepest cause of "reads like a model answering a brief": inhabit the artifact's real author instead.
 
 ## Move 1 — Register the true ask (before producing)
 
-Write a quick frame **in the chat, not in the artifact** — a few concrete lines — before you produce or audit a single sentence. Skipping it, or leaving it as vague private intent, is what produces metatext: registering the audience is what lets you commit to one shape and one address. Keep it terse; it is scaffolding for you, never part of the deliverable.
+Register these briefly **in the chat, never in the artifact**, before producing or auditing. Skipping it — or leaving it as vague private intent — is what produces metatext. It is scaffolding for you, not part of the deliverable.
 
 - **Artifact** — name the real-world object, not the prompt category: *cold investor email*, *admissions essay*, *settlement deed*, *committable utility* — not "an email" or "a function".
 - **Audience** — who actually receives or uses it: the investor, the admissions officer, the next engineer, the compiler. *Not* the person who prompted you.
-- **Intended nature** — what this object is *for* in the world: to persuade, instruct, bind, document, reassure, sell, record, or execute. Then the live test: does the current content actually *do* that, or is it shaped like a chat answer about the task? A mismatch here is the metatext the eye misses.
-- **Exemplar** — what a real professional instance contains, and three things it would *never* contain (a contract has no introduction or sign-off; an admissions essay has no thesis statement or "in conclusion"). Those three are your negative constraints while producing and auditing.
+- **Intended nature** — what this object is *for*: to persuade, instruct, bind, document, sell, record, or execute. Then the test: does the content actually *do* that, or is it shaped like a chat answer about the task?
+- **Exemplar** — what a real instance contains, and a few things it would *never* contain (a contract has no introduction or sign-off). Those are your negative constraints.
 - **The why** — what outcome the user actually wants this to cause; what would make them say "yes, exactly that". Separate the literal request from the goal behind it.
 - **Scope edges** — what belongs, and what is tempting to add but does not.
 
